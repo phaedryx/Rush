@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>SyntaxHighlighter Build Test Page</title>
+	<script type="text/javascript" src="scripts/shCore.js"></script>
+	<script type="text/javascript" src="scripts/shBrushRuby.js"></script>
+	<link type="text/css" rel="stylesheet" href="styles/shCore.css"/>
+	<link type="text/css" rel="stylesheet" href="styles/shThemeRush.css">
+	<script type="text/javascript">
+		SyntaxHighlighter.config.clipboardSwf = 'scripts/clipboard.swf';
+		SyntaxHighlighter.all();
+	</script>
+</head>
+
+<body>
+<h1>SyntaxHighlighter Test</h1>
+<p>This is a text of the ruby brush and theme.</p>
+
+<pre class="brush: ruby;">
+# a comment
+# another comment
+
+$global = "global"
+
+CONSTANT = []
+
+module Foo
+  class Bar < Object
+    @@class_variable = "class variable"
+
+    def initialize(options={})
+      @instance_variable = options
+    end
+
+    def strings
+      'no interpolation'
+      "#{interpolation}, and backslashes\n"
+      %q(no interpolation)
+      %Q(interpolation and backslashes)
+      %(interpolation and backslashes)
+      `echo command interpretation with interpolation and backslashes`
+      %x(echo command interpretation with interpolation and backslashes)
+    end
+
+    def regular_expressions
+      %r(reg ex)
+      /^PATTERN$/i
+    end
+
+    def symbols
+      :symbol1
+      :"symbol2"
+      %s(symbol3)
+    end
+  end
+end
+
+Foo::Bar.new({:one => "one", :two => "two", :three => "three"})
+
+File.open(__FILE__, "r") {|file| file.each_line {|line| puts line}}
+
+#keywords
+bool = true and false or not nil
+
+</pre>
+</html>

@@ -1,0 +1,6 @@
+h2. Rush
+
+I like the javascript SyntaxHighlighter written by Alex Gorbatchev 
+(http://alexgorbatchev.com/wiki/SyntaxHighlighter) by I didn't care 
+for the treatment of Ruby.  I decided to write my own Ruby "brush" 
+and a matching theme that is ruby centric.
