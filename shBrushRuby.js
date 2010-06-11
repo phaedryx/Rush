@@ -38,23 +38,23 @@ SyntaxHighlighter.brushes.Ruby = function()
 					'self super then throw true undef unless until when while yield __FILE__ __LINE__';
 	
 	this.regexList = [
-		{ regex: SyntaxHighlighter.regexLib.singleLinePerlComments,	css: 'comment' },
+		{ regex: SyntaxHighlighter.regexLib.singleLinePerlComments, css: 'comment' },
 		{ regex: SyntaxHighlighter.regexLib.doubleQuotedString,     css: 'string' },
-		{ regex: SyntaxHighlighter.regexLib.singleQuotedString,		  css: 'string' },
+		{ regex: SyntaxHighlighter.regexLib.singleQuotedString,     css: 'string' },
 		{ regex: /\%q\(.*\)/g, css: 'string'},
 		{ regex: /\%x\(.*\)/g, css: 'string'},
 		{ regex: /\`.+\`/g,    css: 'string'},
 		{ regex: /\%\(.*\)/g,  css: 'string'},
-		{ regex: /\b[A-Z][A-Za-z0-9_]+\b/g,	css: 'constant' },
+		{ regex: /\b[A-Z][A-Za-z0-9_]*\b/g,	css: 'constant' },
 		{ regex: /:[a-z][A-Za-z0-9_]*/g, css: 'symbol' },
-		{ regex: /:\"[A-Za-z0-9_]+\"/g, css: 'symbol'},
-		{ regex: /\%s\(.*\)/g, css: 'symbol'},
-		{ regex: /(\$|@@|@)\w+/g,	css: 'variable' },	// $global, @instance, and @@class variables
+		{ regex: /:\"[A-Za-z0-9_]+\"/g,  css: 'symbol' },
+		{ regex: /\%s\(.*\)/g,           css: 'symbol' },
+		{ regex: /(\$|@@|@)\w+/g,   css: 'variable' },	// $global, @instance, and @@class variables
 		{ regex: /[\{\}\(\)\[\]]/g, css: 'paren'},
 		{ regex: /\/.+\/[imosx]*/g, css: 'regexp'},
-		{ regex: /\%r\(.*\)/g, css: 'regexp'},
+		{ regex: /\%r\(.*\)/g,      css: 'regexp'},
 		{ regex: /\.[A-Za-z][A-Za-z0-9_]+/g, css: 'method'},
-		{ regex: new RegExp(this.getKeywords(keywords), 'gm'),	css: 'keyword'}
+		{ regex: new RegExp(this.getKeywords(keywords), 'gm'), css: 'keyword'}
 	];
 
 	this.forHtmlScript(SyntaxHighlighter.regexLib.aspScriptTags);
