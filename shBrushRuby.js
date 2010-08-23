@@ -45,6 +45,8 @@ SyntaxHighlighter.brushes.Ruby = function()
 		{ regex: /\%x\(.*\)/g, css: 'string'},
 		{ regex: /\`.+\`/g,    css: 'string'},
 		{ regex: /\%\(.*\)/g,  css: 'string'},
+		{ regex: /\%!.*!/g,    css: 'string'},
+		{ regex: /\%\{.*\}/g,  css: 'string'},
 		{ regex: /\b[A-Z][A-Za-z0-9_]*\b/g, css: 'constant' },
 		{ regex: /:[a-z][A-Za-z0-9_]*/g,   css: 'symbol' },
 		{ regex: /:\"[A-Za-z0-9_ ]+\"/g,   css: 'symbol' },
